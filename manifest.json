@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Title Link Picker",
+  "version": "1.0.0",
+  "description": "A function that allows you to copy the title and link of the site you are currently on to the clipboard in Markdown link format.",
+  "icons": {
+    "48": "images/icon-48.png",
+    "128": "images/icon-128.png"
+  },
+  "content_scripts": [
+    {
+      "js": ["content-script.js"]
+    }
+  ]
+}
