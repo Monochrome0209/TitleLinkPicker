@@ -4,7 +4,7 @@ changelog:
     labels:
       - ignore-for-release
   categories:
-      - title: 新機能 🎉
+    - title: 新機能 🎉
       labels:
         - enhancement
     - title: 🛠️ 改善 🛠️
