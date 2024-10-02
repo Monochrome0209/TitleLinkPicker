@@ -1,0 +1,16 @@
+name: Feature Issue
+description: 新機能開発用
+title: "{機能タイトル名}"
+labels: ["enhancement"]
+assignees: "Monochrome0209"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🚀 新規/追加機能案 🚀
+  - type: textarea
+    attributes:
+      label: 機能内容
+      placeholder: 新規追加する内容を記載
+    validations:
+      required: true
