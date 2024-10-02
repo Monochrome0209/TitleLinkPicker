@@ -1,0 +1,45 @@
+name: Report
+description: バグ報告はこちらへ 📩
+title: "{バグのタイトル}"
+labels: ["bug"]
+assignees: "Monochrome0209"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## ⚒️ バグの報告/修正依頼 ⚒️
+  - type: textarea
+    attributes:
+      label: バグ内容
+      placeholder: バグの内容を記載してください
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: 再現方法
+      description: "バグの再現方法を記載してください"
+      value: |
+        1. 
+        2. 
+        3. 
+        ...
+    validations:
+      required: false
+  - type: checkboxes
+    id: os
+    attributes:
+      label: 発生したOSの種類
+      description: "発生したOSの種類をチェックしてください"
+      options:
+        - label: Mac
+        - label: windows
+        - label: linux
+        - label: other
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: その他
+      description: "その他記載することがあれば記載してください"
+    validations:
+      required: false
