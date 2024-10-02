@@ -1,89 +1,14 @@
-## ブランチ運用
+# リリース運用
 
-ブランチ運用はいかに示す図の通り。
-
-```stl
-solid branch_model
-  // Main Branch (Horizontal)
-  facet normal 0 0 0
-    outer loop
-      vertex 0 0 0
-      vertex 10 0 0
-      vertex 0 1 0
-    endloop
-  endfacet
-  facet normal 0 0 0
-    outer loop
-      vertex 10 0 0
-      vertex 10 1 0
-      vertex 0 1 0
-    endloop
-  endfacet
-
-  // Develop Branch (Vertical)
-  facet normal 0 0 0
-    outer loop
-      vertex 5 0 0
-      vertex 5 0 5
-      vertex 6 0 5
-    endloop
-  endfacet
-  facet normal 0 0 0
-    outer loop
-      vertex 5 0 0
-      vertex 6 0 5
-      vertex 6 0 0
-    endloop
-  endfacet
-
-  // Feature Branch (Diagonal from Develop)
-  facet normal 0 0 0
-    outer loop
-      vertex 5 0 5
-      vertex 8 0 8
-      vertex 6 0 5
-    endloop
-  endfacet
-  facet normal 0 0 0
-    outer loop
-      vertex 8 0 8
-      vertex 6 0 5
-      vertex 8 0 7
-    endloop
-  endfacet
-
-  // Fix Branch (Diagonal from Develop)
-  facet normal 0 0 0
-    outer loop
-      vertex 5 0 5
-      vertex 3 0 8
-      vertex 6 0 5
-    endloop
-  endfacet
-  facet normal 0 0 0
-    outer loop
-      vertex 3 0 8
-      vertex 6 0 5
-      vertex 3 0 7
-    endloop
-  endfacet
-
-  // Hotfix Branch (Direct from Main)
-  facet normal 0 0 0
-    outer loop
-      vertex 9 0 0
-      vertex 9 0 3
-      vertex 10 0 3
-    endloop
-  endfacet
-  facet normal 0 0 0
-    outer loop
-      vertex 9 0 0
-      vertex 10 0 3
-      vertex 10 0 0
-    endloop
-  endfacet
-
-endsolid branch_model
-
-```
+1. [ブランチ運用](./branch.md#releasexyzブランチ)を参考に、release/x.y.zブランチを作成
+2. 作成されたリリースブランチからmainブランチへ向けてPullRequestを作成
+3. PullRequestをマージ
+4. [リリースノートページ](https://github.com/Monochrome0209/TitleLinkPicker/releases)へ移動
+5. [新しいリリースノートを作成するページ](https://github.com/Monochrome0209/TitleLinkPicker/releases/new)へ繊維
+6. 「Choose a tag」はrelease/x.y.zからvx.y.zを作成
+7. 「Target: main」へ設定
+8. 「Generate release notes」ボタンを押下
+9. 自動生成されたリリースノートに不備がないことを確認
+10. 下部の「Set as pre-release」にチェックが入っていないことを確認
+11. 下部の「Set as the latest release」にチェックが入っていることを確認
+12. 「Publish release」ボタンを押下
