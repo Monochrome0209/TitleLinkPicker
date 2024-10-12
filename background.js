@@ -1,3 +1,6 @@
+/**
+ * Scriptを実行するタブを現在開いているタブを指定
+ */
 chrome.action.onClicked.addListener((tab) => {
   chrome.scripting.executeScript({
     target: { tabId: tab.id },
@@ -5,6 +8,10 @@ chrome.action.onClicked.addListener((tab) => {
   });
 });
 
+/**
+ * 開いているタブのURLをコピーし、Markdown形式で保存する
+ * [{Web Title}](Web URL)
+ */
 function pickTitleAndLink() {
   const pageTitle = document.title;
   const url = document.URL;
