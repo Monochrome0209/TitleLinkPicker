@@ -15,7 +15,6 @@ chrome.action.onClicked.addListener((tab) => {
 function pickTitleAndLink() {
   const pageTitle = document.title;
   const url = document.URL;
-
   // markdownのリンク形式として保存
   const markdownLink = `[${pageTitle}](${url})`;
 
@@ -29,7 +28,7 @@ function pickTitleAndLink() {
       notification.style.bottom = "10px";
       notification.style.right = "10px";
       notification.style.padding = "10px";
-      notification.style.backgroundColor = "black";
+      notification.style.backgroundColor = "#1f6feb";
       notification.style.color = "white";
       notification.style.borderRadius = "5px";
       notification.style.boxShadow = "0 0 10px rgba(0, 0, 0, 0.5)";
